@@ -1,0 +1,128 @@
+* {
+    padding: 0px;
+    margin: 0px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+    border: 1px solid red;
+
+}
+body {
+    background: #222; 
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 10px;
+    transform: scale(0.9);
+    font-family: 'poppins', Arial, Helvetica, sans-serif;
+    
+}
+
+.card {
+    background-image: linear-gradient(135deg, #00feba, #5b548a);
+    max-width: 470px;
+    width: 75%;    
+    color: #fff;
+    border-radius: 20px;
+    padding: 40px 35px;
+    text-align: center;
+    margin: 0px auto 0;
+    box-shadow: 0px 12px 28px rgb(234, 240, 238, .8);
+    -webkit-transform: scale(0.9);
+
+
+}
+
+.bubbles {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    opacity: .4;
+    left: 0px;
+    top: 40px;
+    border-radius: 50%;
+}
+
+.small {
+    position: absolute;
+    left: 80px;
+    width: 40px;
+    height: 40px;
+    top: 120px;
+}
+.search {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.search input {
+    border: 0;
+    outline: 0;
+    background-color: #eefaf9;
+    color: #555;
+    padding: 10px 20px;
+    height: 40px;
+    border-radius: 30px;
+    flex: 1;
+    margin-right: 16px;
+    font-size: 18px;
+}
+
+.search button {
+    border: 0;
+    outline: 0;
+    background-color: #eefaf9;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+
+}
+
+.search button img {
+    width: 16px;
+}
+.weatherIcon {
+    border-radius: 25%;
+    margin-top: 10px;
+    width: 170px;
+    height: 55%;
+    box-shadow: 0px 6px 22px rgb(45, 56, 57);
+}
+.weather h1 {
+    font-size: 80px;
+    font-weight: 500;
+}
+.weather{
+    justify-content: center;
+}
+.weather h2 {
+    font-size: 45px;
+    font-weight: 400;
+    margin-top: -10px;
+}
+.details {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    margin-top: 0px;
+    gap: 4px;  
+    
+}
+.columns img {
+    margin-right: 0px;
+    
+}
+.humidity, .wind, .sunrise, .sunset{
+    font-size: 20px;
+    margin-top: 0px;  
+}
+.weather {
+    display: none;
+}
+.error{
+    color: red;
+    text-align: left;
+    margin-left: 10px;
+    display: none;
+}
