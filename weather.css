@@ -126,3 +126,36 @@ body {
     margin-left: 10px;
     display: none;
 }
+
+/* Add this to your existing styles */
+@media only screen and (max-width: 768px) {
+    /* Adjusting the card width on mobile devices */
+    .card {
+        width: 80vw;
+        padding: 20px 15px;
+    }
+
+    /* Ensure search input fits well within the card */
+    .search input {
+        font-size: 16px;
+        padding: 8px 15px;
+    }
+
+    .search button {
+        width: 50px;
+        height: 50px;
+    }
+
+    /* Adjusting font sizes for better readability on smaller screens */
+    .weather h1 {
+        font-size: 60px;
+    }
+
+    .weather h2 {
+        font-size: 30px;
+    }
+
+    .details p {
+        font-size: 14px;
+    }
+}
