@@ -3,6 +3,7 @@
     margin: 0px;
     font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
+    
 }
 
 body {
@@ -24,6 +25,17 @@ body {
     text-align: center;
     margin: 0px auto 0;
     box-shadow: 0px 12px 28px rgb(234, 240, 238, .8);
+}
+
+.card::after {
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color: #fff;
+    opacity: .4;
+    left: 0px;
+    top: 40px;
+    border-radius: 50%;
 }
 
 .bubbles {
@@ -50,7 +62,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    border: 1px solid red;
+    
 }
 .search input {
     border: 0;
@@ -85,6 +97,7 @@ body {
     width: 170px;
     height: 55%;
     box-shadow: 0px 6px 22px rgb(45, 56, 57);
+    
 }
 
 .weather h1 {
@@ -107,13 +120,15 @@ body {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     margin-top: 0px;
     gap: 4px;
+    font-size: 70%;
 }
 
 .columns img {
     margin-right: 0px;
+
 }
 
-.humidity, .wind, .sunrise, .sunset {
+.humidity, .wind, .country, .localTime {
     font-size: 20px;
     margin-top: 0px;
 }
@@ -146,7 +161,7 @@ body {
         display: flex;
         align-items: center;
         column-gap: 2px;
-        border: 1px solid red;
+        
         
     }
 
@@ -175,9 +190,11 @@ body {
     .details {
         grid-template-columns: 1fr 1fr;
         gap: 10px;
+        font-size: 50%;
     }
 
     .humidity, .wind, .sunrise, .sunset {
         font-size: 16px;
     }
+    
 }

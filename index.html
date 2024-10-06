@@ -56,16 +56,16 @@
                 <div class="columns col-3">
                     <img src="" alt="">
                     <div>
-                        <p class="sunrise" id="sunriseTime">8:am</p>
-                        <p>Sunrise</p>
+                        <p class="localTime" id="localTime">8:am</p>
+                        <p>Local time</p>
                     </div>
                 </div>
 
                 <div class="columns col-4">
                     <img src="" alt="">
                     <div>
-                        <p class="sunset" id="sunsetTime">9pm</p>
-                        <p>Sunset</p>
+                        <p class="country" id="country">9pm</p>
+                        <p>Country</p>
                     </div>
                 </div>
             </div>
@@ -100,8 +100,8 @@
                     document.getElementById('cityName').textContent = data.location.name;
                     document.getElementById('humidity').textContent = `${data.current.humidity}%`;
                     document.getElementById('windSpeed').textContent = `${data.current.wind_kph} km/h`;
-                    document.getElementById('sunriseTime').textContent = "N/A";  // Sunrise info not available in current API
-                    document.getElementById('sunsetTime').textContent = "N/A";  // Sunset info not available in current API
+                    document.getElementById('localTime').textContent = data.location.localtime.slice(-5);
+                    document.getElementById('country').textContent = data.location.country;
                     weatherCondition.innerHTML = `${data.current.condition.text.toLowerCase()}`;
 
                     // Correct weather condition access
@@ -130,6 +130,14 @@
                         case "fog": 
                             weatherIcon.src = "";
                             break;
+                        case "light drizzle":
+                            weatherIcon.src = "";
+                            break;
+                        case "patchy light rain in area with thunder": 
+                            weatherIcon.src = "";
+                            break;
+                        case "patchy rain nearby": 
+                            weatherIcon.src = "";
                         default:
                             weatherIcon.src = "snowing sunny.png";
                             break;
