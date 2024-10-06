@@ -102,7 +102,7 @@
                     document.getElementById('windSpeed').textContent = `${data.current.wind_kph} km/h`;
                     document.getElementById('sunriseTime').textContent = "N/A";  // Sunrise info not available in current API
                     document.getElementById('sunsetTime').textContent = "N/A";  // Sunset info not available in current API
-                    weatherCondition.innerHTML = `----${data.current.condition.text.toLowerCase()}----`;
+                    weatherCondition.innerHTML = `${data.current.condition.text.toLowerCase()}`;
 
                     // Correct weather condition access
                     switch (data.current.condition.text.toLowerCase()) {
